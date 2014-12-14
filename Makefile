@@ -1,7 +1,7 @@
 .PHONY: watch build site_structure ck_editor
 
 watch: build
-	gulp
+	gulp watch
 	cd site && python -m SimpleHTTPServer
 
 build: ckeditor site_structure

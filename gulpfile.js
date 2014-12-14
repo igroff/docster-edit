@@ -35,4 +35,9 @@ gulp.task('style', function(){
     .pipe(gulp.dest('./site/'))
 });
 
-gulp.task('default', ['javascripts', 'coffee', 'all_scripts', 'style']);
+gulp.task('all', ['javascripts', 'coffee', 'all_scripts', 'style']);
+gulp.task('default', ['all']);
+gulp.task('watch',  ['all'], function(){
+  gulp.watch('src/*/*.js', ['all']);
+  gulp.watch('src/*/*.coffee', ['all']);
+});
