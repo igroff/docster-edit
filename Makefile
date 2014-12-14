@@ -8,10 +8,10 @@ build: ckeditor site_structure
 	cp ./src/index.html ./site
 
 ckeditor: site_structure
-	cp ./src/js/ckeditor/styles.js ./site/ckeditor/
-	cp ./src/js/ckeditor/lang/en.js ./site/ckeditor/lang/
-	cp -R ./src/js/ckeditor/skins/moono/* ./site/ckeditor/skins/moono/
-	cp ./src/js/ckeditor/contents.css ./site/ckeditor/
+	cp ./lib/ckeditor/styles.js ./site/ckeditor/
+	cp ./lib/ckeditor/lang/en.js ./site/ckeditor/lang/
+	cp -R ./lib/ckeditor/skins/moono/* ./site/ckeditor/skins/moono/
+	cp ./lib/ckeditor/contents.css ./site/ckeditor/
 
 site_structure: clean
 	mkdir -p ./site/ckeditor/lang
