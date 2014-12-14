@@ -1,1 +1,3 @@
-console.log "written by coffee script"
+saveHandler = () ->
+  console.log "save handler called"
+window.saveHandler = saveHandler

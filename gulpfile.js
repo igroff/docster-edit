@@ -7,7 +7,7 @@ var debug  = require('gulp-debug');
 var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('javascripts', function() {
-  return gulp.src(['lib/ckeditor/ckeditor.js'])
+  return gulp.src(['lib/ckeditor/ckeditor.js', 'src/*/*js'])
     .pipe(concat('js.js'))
     .pipe(gulp.dest('./site/'))
 });

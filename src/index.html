@@ -16,7 +16,8 @@
           This is my textarea to be replaced with CKEditor.
       </textarea>
       <script>
-          CKEDITOR.replace( 'editor1', { customConfig:'' } );
+          var editor = CKEDITOR.replace( 'editor1', { customConfig:'' } );
+          editor.on('save', saveHandler);
       </script>
     </form>
   </div>
