@@ -5,6 +5,7 @@ watch: build
 	cd site && python -m SimpleHTTPServer
 
 build: ckeditor site_structure
+	gulp
 	cp ./src/index.html ./site
 
 ckeditor: site_structure
