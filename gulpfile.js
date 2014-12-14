@@ -8,7 +8,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('style', function(){
-  gulp.src(['lib/ckeditor/contents.css'])
+  gulp.src(['lib/ckeditor/contents.css', 'src/css/style.css'])
     .pipe(concat('all.css'))
     .pipe(gulp.dest('./site/'))
 });

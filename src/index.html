@@ -10,14 +10,16 @@
   <script type="text/javascript" src="all.js"></script>
 </head>
 <body>
-  <form>
+  <div id="content_area">
+    <form>
       <textarea name="editor1" id="editor1" rows="10" cols="60">
           This is my textarea to be replaced with CKEditor.
       </textarea>
       <script>
           CKEDITOR.replace( 'editor1', { customConfig:'' } );
       </script>
-  </form>
+    </form>
+  </div>
 </body>
 </html>
 
