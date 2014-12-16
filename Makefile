@@ -1,8 +1,10 @@
-.PHONY: watch build site_structure ck_editor
+.PHONY: serve build site_structure ck_editor
 
-watch: build
-	gulp watch
-	cd site && python -m SimpleHTTPServer
+watch:
+	./node_modules/.bin/supervisor -x bash -- -c 'exec make serve'
+
+serve: build
+	cd site && exec python -m SimpleHTTPServer
 
 build: ckeditor site_structure
 	gulp
