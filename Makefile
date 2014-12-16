@@ -1,7 +1,7 @@
 .PHONY: serve build site_structure ck_editor
 
 watch:
-	./node_modules/.bin/supervisor --ignore site -x bash -- -c 'exec make serve'
+	./node_modules/.bin/supervisor --extensions js,coffee,html --ignore site -x bash -- -c 'exec make serve'
 
 serve: build
 	cd site && exec python -m SimpleHTTPServer

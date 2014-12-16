@@ -7,7 +7,7 @@ var debug  = require('gulp-debug');
 var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('javascripts', function() {
-  return gulp.src(['lib/ckeditor/ckeditor.js', 'src/*/*js'])
+  return gulp.src(['lib/ckeditor/ckeditor.js', 'src/vendor/*/*.js', 'src/*/*js'])
     .pipe(concat('js.js'))
     .pipe(gulp.dest('./site/'))
 });
@@ -21,7 +21,7 @@ gulp.task('coffee', function(){
 });
 
 gulp.task('all_scripts', ['coffee', 'javascripts'], function(cb){
-  gulp.src(['./site/coffee.js', './site/js.js'])
+  gulp.src(['./site/js.js', './site/coffee.js'])
     .pipe(concat('all.js'))
     .pipe(gulp.dest('./site/'))
     .on('end', function(){
