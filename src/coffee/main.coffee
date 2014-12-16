@@ -13,10 +13,11 @@ angular.module("docster-edit", [])
   editor.on 'save', () =>
     $scope.locationPromise.then (position) ->
       doc =
+        command: 'store'
+        type: 'docster|doc'
         data: editor.getData()
         coords: position.coords
         date: new Date()
-      console.log "bitchin': ", doc
     $scope.locationPromise.catch (err) ->
       console.log "uh oh: ", err
     false # prevent the form submission
